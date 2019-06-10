@@ -2,12 +2,11 @@ body {
     background-color: black;
 }
 
-.display-4 {
+#stats {
     text-align: center;
-    color: yellow;
     font-weight: bolder;
     margin: 10px;
-    padding-bottom: 20px;
+    font-size: 2rem;
 }
 
 .card-img-top {
@@ -19,4 +18,8 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     margin: 10px;
+}
+
+.card-title {
+    text-align: center;
 }
