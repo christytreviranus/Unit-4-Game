@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+}
+
+.display-4 {
+    text-align: center;
+    color: yellow;
+    font-weight: bolder;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.card-img-top {
+    padding-top: 10px;
+}
+
+.card-deck {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+}
