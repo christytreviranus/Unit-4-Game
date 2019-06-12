@@ -19,46 +19,54 @@ let Cry4 = Math.floor(Math.random() * 11) + 1;
 //Add a click event on the crystals
 
 $("#crystal-one").on ("click", function(){
-    counter = playerScore + Cry1;
-    playerScore = $("#player-score").text(counter + Cry1);
+    playerScore += Cry1;
+    $("#player-score").text("Player Score: " + playerScore);
 
     if (playerScore === targetScore){
         win();
-    } else if (playerScore > targetScore) {
+        
+    } else if (playerScore >= targetScore) {
         lose();
+        
     }
 });
 
 $("#crystal-two").on ("click", function(){
-    counter = playerScore + Cry2;
-    playerScore = $("#player-score").text(counter + Cry2);
+    playerScore += Cry2;
+    $("#player-score").text("Player Score: " + playerScore);
 
     if (playerScore === targetScore){
         win();
-    } else if (playerScore > targetScore) {
+        
+    } else if (playerScore >= targetScore) {
         lose();
+        
     }
 });
 
 $("#crystal-three").on ("click", function(){
-    counter = playerScore + Cry3;
-    playerScore = $("#player-score").append(counter + Cry3);
+    playerScore += Cry3;
+    $("#player-score").text("Player Score: " + playerScore);
 
     if (playerScore === targetScore){
         win();
-    } else if (playerScore > targetScore) {
+        
+    } else if (playerScore >= targetScore) {
         lose();
+        
     }
 });
 
 $("#crystal-four").on ("click", function(){
-    counter = playerScore + Cry4;
-    playerScore = $("#player-score").append(counter + Cry4);
+    playerScore += Cry4;
+    $("#player-score").text("Player Score: " + playerScore);
 
     if (playerScore === targetScore){
         win();
-    } else if (playerScore > targetScore) {
+        
+    } else if (playerScore >= targetScore) {
         lose();
+        
     }
 });
 
@@ -75,7 +83,7 @@ $("#target-score").append(targetScore);
 function win() {
     //Display the win to #wins
     wins++;
-    $("#wins").append(wins);
+    $("#wins").text("Wins: " + wins);
     reset();
 }
 
@@ -84,7 +92,7 @@ function win() {
 function lose(){
     //Display the lose to #losses
     losses++;
-    $("#losses").append(losses);
+    $("#losses").text("Losses: " + losses);
     reset();
 }
 
@@ -98,8 +106,10 @@ function reset(){
     Cry4 = Math.floor(Math.random() * 11) + 1;
     //Generate new random target score
     targetScore = Math.floor(Math.random()*(120 - 19 +1) + 19);
+    $("#target-score").text("Target Score: " + targetScore);
     //Clear playerscore
     playerScore = 0
+    $("#player-score").text("Player Score: " + playerScore);
 }
 
 
